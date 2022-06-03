@@ -1,0 +1,1 @@
+export const getSidebarIsActive = (state) => state.sideBarToggle.isActive

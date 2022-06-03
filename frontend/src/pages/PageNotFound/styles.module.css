@@ -1,0 +1,38 @@
+.pageWrapper{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.errorWrapper{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.error{
+    width: 570px;
+    will-change: top;
+    margin: 0 auto;
+}
+
+.errorTitle{
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-left: 140px;
+    z-index: 2;
+    font-weight: 700;
+}
+
+.errorMessage{
+    font-size: 17px;
+    line-height: 1.6em;
+    padding-left: 140px;
+    z-index: 3;
+}

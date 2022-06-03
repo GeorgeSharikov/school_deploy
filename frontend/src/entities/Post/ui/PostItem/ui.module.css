@@ -1,0 +1,31 @@
+.post{
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.footer{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 11px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.footer div:last-child{
+    margin-left: auto;
+}
+
+.footerItem{
+    margin-right: 33px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+.footerItem a {
+    transition: color 0.2s;
+}
+.footerItem a:hover{
+    color: var(--blue-hover-color);
+}

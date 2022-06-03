@@ -1,0 +1,18 @@
+export const modalStyles = {
+    backgroundColor: '#fff',
+    padding: '50px',
+    border: 'white',
+    borderRadius: '8px',
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 'auto',
+    boxSizing: 'border-box',
+    height: '600px',
+    width: '428px',
+    position: 'absolute',
+    top: 0, 
+    right: 0, 
+    bottom: 0, 
+    left: 0,
+    outline: 0,
+}

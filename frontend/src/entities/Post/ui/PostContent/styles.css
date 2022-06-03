@@ -1,0 +1,229 @@
+.content-short{
+    margin-bottom: 13px;
+}
+.content-short .I-island-a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-short p a{
+    color: #3766a9!important;
+    border-bottom: 1px solid #bed0ea!important;
+    cursor: pointer;
+}
+
+@media (max-width: 640px){
+.content-short .I-island-a{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+}
+
+.content-short ol, .content-short ul{
+margin: 12px 0;
+list-style: disc;
+list-style-position: outside;
+line-height: 26px;
+font-size: 20px;
+}
+
+.content-short ol{
+list-style-type: decimal;
+}
+
+.content-short ol li, .content-short ul li {
+margin: 10px 0 10px 2em;
+word-wrap: break-word;
+}
+
+
+.content-short p{
+margin-bottom: 12px;
+line-height: 26px;
+font-size: 17px;
+}
+
+.content-short h2,h3,h4, h5, h6{
+font-weight: 500;
+margin-bottom: 8px
+}
+
+.content-short figure {
+margin-top: 13px;
+}
+
+.content-short figure:last-child {
+margin-bottom: 4px;
+}
+
+.content-short .quote{
+background-color: #fffaf1;
+padding: 35px 0 40px;
+}
+
+.content-short .quote_text_center .quote_text_big{
+text-align: center;
+}
+
+.content-short .quote_text_center .quote_text{
+text-align: center;
+}
+
+.content-short .quote_content{
+max-width: 450px;
+margin: auto;
+position: relative;
+width: 100%;
+}
+
+.content-short .quote_content svg{
+
+position: absolute;
+left: -57px;
+top: 0.25em;
+pointer-events: none;
+fill: rgb(0, 0, 0);
+width: 39px;
+height: 28px;
+}
+
+
+
+@media (min-width: 860px){
+.content-short .quote_content{
+    width: 465px;
+}
+}
+
+.content-short .quote_text{
+font-size: 22px;
+font-weight: 400;
+line-height: 30px;
+word-wrap: break-word;
+}
+
+.content-short .quote_text_medium{
+font-size: 24px;
+font-weight: 500;
+line-height: 34px;
+word-wrap: break-word;
+}
+
+.content-short .quote_text_big{
+font-size: 29px;
+font-weight: 500;
+line-height: 37px;
+word-wrap: break-word;
+}
+
+.content-short .quote_author{
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+font-weight: 600;
+line-height: 1.45em;
+font-size: 1.06em;
+}
+
+
+.content-short .block-delimiter:before {
+display: block;
+content: '***';
+font-size: 36px;
+line-height: 1em;
+height: 0.6em;
+letter-spacing: .2em;
+text-align: center;
+}
+
+.content-short .warning{
+display: flex;
+padding: 20px;
+margin: 30px 0;
+border-radius: 7px;
+background: #fff9ef;
+color: #392e2f;
+font-size: 15px;
+}
+
+.content-short .warning_sign{
+margin-right: 15px;
+}
+
+.content-short .warning_text{
+padding-left: 15px;
+}
+
+.content-short .warning_title{
+font-weight: 700;
+}
+
+.content-short .figure-image{
+margin-top: 13px;
+margin-bottom: 4px;
+}
+
+.content-short .content-image{
+display: flex;
+align-items: center;
+}
+
+.content-short .image-padding{
+padding: 8px 0;
+}
+
+.content-short .content-image-background{
+background-color: rgba(0,0,0,0.08);
+display: flex;
+justify-content: center;
+}
+
+.content-short .image-inner{
+
+}
+
+.content-short .image-inner img{
+display: block;
+width: 100%;
+}
+
+.content-short figcaption{
+margin-top: 12px;
+font-size: 15px;
+line-height: 22px;
+}
+
+.content-short .content-image-caption{
+display: none;
+}
+
+
+@media (max-width: 859px){
+.content-short .content-short ol li, .content-short .content-short ul li {
+    margin-left: 1.4em;
+}
+
+.content-short .quote{
+    padding: 15px 25px 18px 50px;
+}
+
+.content-short .quote_content{
+    width: 100%;
+}
+
+.content-short .quote_text{
+    font-size: 18px;
+    line-height: 1.6em;
+}
+.content-short .quote_text_medium{
+    font-size: 18px;
+    line-height: 25px;
+}
+.content-short .quote_text_big{
+    font-size: 22px;
+    line-height: 28px;
+}
+.content-short .block-delimiter:before {
+    font-size: 23px;
+}
+}

@@ -1,0 +1,32 @@
+.title{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 22px;
+    line-height: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+.prewords{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mediaContainer{
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+
+.mediaContent{
+    max-height: 1500px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mediaContent img{
+    display: block;
+    width: 100%;
+}

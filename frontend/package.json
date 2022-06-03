@@ -1,0 +1,67 @@
+{
+  "name": "school_project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@editorjs/editorjs": "^2.22.2",
+    "@editorjs/embed": "^2.5.0",
+    "@editorjs/header": "^2.6.2",
+    "@editorjs/list": "^1.6.2",
+    "@editorjs/nested-list": "^1.0.2",
+    "@editorjs/paragraph": "^2.8.0",
+    "@editorjs/table": "^2.0.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.2",
+    "@reduxjs/toolkit": "^1.7.1",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.26.1",
+    "formik": "^2.2.9",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-expanding-textarea": "^2.3.5",
+    "react-notifications": "^1.7.3",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/image": "^2.6.2",
+    "@editorjs/link": "^2.4.0",
+    "@editorjs/marker": "^1.2.2",
+    "@editorjs/quote": "^2.4.0",
+    "@editorjs/simple-image": "^1.4.1",
+    "@editorjs/warning": "^1.2.0"
+  }
+}

@@ -1,0 +1,4 @@
+.time{}
+.time:hover{
+    color: var(--blue-hover-color);
+}

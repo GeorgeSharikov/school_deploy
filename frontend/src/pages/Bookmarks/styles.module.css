@@ -1,0 +1,7 @@
+.wrapper{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}

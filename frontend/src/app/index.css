@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f2f2f2;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p{
+  margin: 0px;
+}
+button, input, textarea {
+  font-family: inherit;
+}
+:root{
+  --blue-hover-color: #3766a9;
+  --gray-color: #595959;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+figure, blockquote{
+  margin: 0px; 
+}
+
+ol, ul{
+  padding: 0;
+}
+.notification-container{
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 999999;
+  width: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: .9;
+  font-size: 18px;
+}
+
+.notification{
+  width: 100%;
+  border-radius: 18px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-success{
+  background-color: #4BB543;
+}
+.notification-error{
+  background-color: firebrick;
+}
+
+
+.notification-message{
+  padding: 0px 10px;
+  color: black;
+  cursor: pointer;
+  position: relative;
+
+}
+
+
+
+.notification-enter {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0) scale(0, 0);
+}
+
+.notification-enter.notification-enter-active {
+  visibility: visible;
+  transform: translate3d(0, 0, 0) scale(1, 1);
+  transition: all 0.8s;
+}
+
+.notification-leave {
+  visibility: visible;
+  transform: translate3d(0, 0, 0) scale(1, 1);
+}
+
+ .notification-leave.notification-leave-active {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0) scale(0, 0);
+  transition: all 0.5s;
+}

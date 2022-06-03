@@ -1,0 +1,22 @@
+.header{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    margin-bottom: 10px;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    font-size: 16px;
+    line-height: 1.5em;
+    justify-content: space-between;
+}
+.header a{
+    transition: color 0.2s;
+}
+.header a:hover{
+    color: var(--blue-hover-color);
+}
+
+.info{
+    display: flex;
+}

@@ -1,0 +1,29 @@
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 998;
+    overflow: hidden;
+    padding: 20px 70px;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.editor{
+    --controls-size: 48px;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 880px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    overflow: hidden;
+    mask-image: radial-gradient(#fff, #000);
+}

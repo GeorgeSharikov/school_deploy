@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+.content{
+    flex-grow: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.rightPart{
+    display: inline-block;
+    width: 145px;
+}
+
+@media (max-width: 999px){
+    .rightPart{
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+.status{
+    font-size: 16px;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    word-wrap: break-word
+}
+
+.text{
+    margin-right: 8px;
+    display: block;
+    max-height: 24px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}

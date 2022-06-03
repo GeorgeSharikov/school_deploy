@@ -1,0 +1,49 @@
+.actions{
+    cursor: pointer;
+    color: #595959;
+    transform: rotate(90deg);
+}
+
+.actionsContainer{
+    position: absolute;
+    right: 17px;
+    top: 45px;
+    z-index: 17;
+    min-width: 150px;
+}
+
+.actionContent{
+    display: flex;
+    padding: 6px;
+    position: relative;
+    font-size: 17px;
+    line-height: 1.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    user-select: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 400px;
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.actionItem{
+    /*margin-bottom: 4px;*/
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 18px;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: 0;
+}
+
+.actionItem:hover {
+    background-color: rgba(0,0,0,0.05);
+}

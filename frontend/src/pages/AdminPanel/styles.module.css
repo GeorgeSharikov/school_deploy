@@ -1,0 +1,25 @@
+.wrapper{
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.header{
+    background-color: white;
+    display: flex;
+    vertical-align: top;
+}
+
+.tab{
+    padding: 0 12px;
+    flex-shrink: 0;
+    cursor: pointer;
+    color: #4d4d4d;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.tab:hover {
+    color: #4683d9;
+}

@@ -1,0 +1,65 @@
+.container{
+    --min-width-value: 0;
+    --offset-value-x: 4px;
+    --offset-value-top: 0px;
+    --size-button: 28px;
+    --size-icon: 20px;
+    font-size: 14px;
+    --height: 20px;
+    --gap: 4px;
+    display: grid;
+    grid-template-columns: 28px minmax(0,1fr) 28px;
+    gap: 6px;
+    align-content: center;
+    -ms-flex-pack: start;
+    justify-content: start;
+    height: 0;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--gray-color);
+    background-color: transparent;
+}
+
+.arrow svg{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.arrow svg:hover{
+    background-color: rgba(0,0,0,0.05)
+}
+
+.likeCounts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: default;
+}
+
+.defaultColor{
+    color: #595959;
+}
+
+.likesRed{
+    color: #e52e3a;
+}
+
+.likesGreen{
+    color: #2ea83a;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}

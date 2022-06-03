@@ -1,0 +1,53 @@
+.show-container{
+    display: flex;
+    justify-content: center;
+}
+
+.cdx-text-variant__toggler{
+
+}
+
+.cdx-text-variant__toggler:hover{
+    background-color: #eff2f5;
+}
+
+.cdx-text-variant__toggler svg {
+    width: 20px;
+    height: 20px;
+
+}
+
+.cdx-settings-button--active{
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0!important;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    vertical-align: bottom;
+    color: #000;
+    margin: 0;
+}
+
+.cdx-settings-button--active svg {
+    width: 20px;
+    height: 20px;
+    fill: #4684d9;
+    stroke: #4684d9;
+}
+
+.cdx-settings-button--active:hover{
+    background-color: #eff2f5;
+
+}

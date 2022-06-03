@@ -1,0 +1,120 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.sideBarHeader{
+    flex-shrink: 0;
+    height: 60px;
+    display: none;
+}
+
+.container{
+    width: 220px;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+}
+
+.sidebarTint{
+}
+
+.sideBarHeaderBurger{
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.sideBarHeaderLogo{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 859px){
+    .container{
+        width: 80%;
+        max-width: 300px;
+        position: fixed;
+        display: block!important;
+        height: 100%;
+        top: 0;
+        z-index: 21;
+    }
+    .sidebarTint{
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background: rgba(0,0,0,.6);
+        z-index: 20;
+    }
+    .wrapper{
+        position: relative;
+        z-index: 2;
+    }
+    .sideBarHeader{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sideBar{
+    margin: 12px 10px;
+}
+
+.element{
+    display: flex;
+    align-items: center;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    border-radius: 8px;
+}
+
+.element:hover{
+    background: rgba(255,255,255,0.4);
+}
+
+.link{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-grow: 2;
+    padding: 0 13px;
+    border-radius: 8px;
+}
+
+.activeLink{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-grow: 2;
+    padding: 0 13px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.activeLink svg{
+    color: #e5a040;
+}
+
+.itemsIcons{
+    color: #595959;
+    margin-right: 12px;
+}
