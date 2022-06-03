@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "pg": "^8.7.3",
     "sequelize": "^6.17.0",
     "sequelize-date-no-tz-postgres": "^1.0.0",
+    "serve-favicon": "^2.5.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

@@ -58,11 +58,11 @@ export const ArticleEditor = ({close}) => {
     }
     useEffect(() => {
         inputRef.current.focus()
-        setTimeout(() => {
-            if(editorRef.current.children[0]) {
-                editorRef.current.removeChild(editorRef.current.children[0])
-            }
-        }, 0)
+        // setTimeout(() => {
+        //     if(editorRef.current.children[0]) {
+        //         editorRef.current.removeChild(editorRef.current.children[0])
+        //     }
+        // }, 0)
         return () => {
             setActiveBlocks([])
             editor?.destroy()
