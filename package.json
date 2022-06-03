@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "install && node server.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "15.x"
   }
 }
