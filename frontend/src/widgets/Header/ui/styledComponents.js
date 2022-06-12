@@ -8,6 +8,11 @@ export const AppBarStl = styled(AppBar)(() => ({
     position: 'sticky',
     backgroundColor: '#fff4e2',
     height: 60,
+    '@media (min-width: 0px) and (orientation: landscape)' :{
+        '.css-c65obd-MuiToolbar-root': {
+            minHeight: '56px'
+        }   
+    }
 }))
 
 export const ToolbarStl = styled(Toolbar)(() => ({

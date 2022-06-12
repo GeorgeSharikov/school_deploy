@@ -69,6 +69,16 @@ class Article{
         }
     }
 
+    async getAllArticles(req, res, next){
+        try{
+
+            const articles = await ArticleService.getAllArticles()
+            res.send(articles)
+        }catch (e) {
+            next(ApiError.internal('Неизвестная ошибка'))
+        }
+    }
+
     async getCountOfAllArticles(req, res, next){
         try{
             const count = await ArticleService.countArticles(req.query, next)

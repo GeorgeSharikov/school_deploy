@@ -24,6 +24,7 @@ export const FullArticle = (props) => {
     const errorMessage = useSelector(state => articleInfoSelectors.getArticleError(state))
 
     useEffect(() => {
+        document.title = 'Лицей Days'
         dispatch(getOneArticle(id)).then(() => {
             setIsFetching(false)
         })

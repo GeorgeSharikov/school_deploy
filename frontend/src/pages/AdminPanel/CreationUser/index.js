@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Field, Form, Formik} from "formik";
 import styles from "./styles.module.css";
-import {userAuthActions} from "../../store/userAuthSlice/slice.js";
-
-import {useActions} from "../../shared/hooks/useActions.jsx";
-import {UserApi} from "../../shared/api/api.js";
+import {userAuthActions} from "../../../store/userAuthSlice/slice.js";
+import {useActions} from "../../../shared/hooks/useActions.jsx";
+import {UserApi} from "../../../shared/api/api.js";
 import {NotificationManager} from "react-notifications";
+
 export const CreationUser = (props) => {
     const {setLoginError} = useActions(userAuthActions)
     const [error, setError] = useState('')
@@ -54,6 +54,7 @@ export const CreationUser = (props) => {
         setLoginError(false)
         setValidateErrors(false)
     }, [setLoginError])
+    document.title = `Админ панель - Создание Пользователя`
     return (
         <div className={styles.wrapper}>
             <Formik

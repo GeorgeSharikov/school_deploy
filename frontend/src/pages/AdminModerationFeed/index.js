@@ -11,7 +11,7 @@ import styles from './styles.module.css'
 
 export const AdminModerationFeed = (props) => {
     const {setAdminModeration} = useActions(adminModerationActions)
-
+    document.title = `Админ панель - Модерация`
     return (
         <div className={styles.wrapper}>
             <BlockOfArticle

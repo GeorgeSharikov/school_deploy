@@ -15,7 +15,11 @@ import {Bookmarks} from "./Bookmarks/index.js";
 import {userAuthSelectors} from "../store/userAuthSlice/slice.js";
 import {AdminModerationFeed} from "./AdminModerationFeed/index.js";
 import {AdminPanel} from "./AdminPanel/index.js";
-import {CreationUser} from "./CreationUser/index.js";
+import {CreationUser} from "./AdminPanel/CreationUser/index.js";
+import {About} from "./About/index.js";
+import {UserList} from "./AdminPanel/UsersList/index.js";
+import {ArticleList} from "./AdminPanel/ArticlesList/index.jsx";
+import {UserSetting} from "./UserSettings/UserSetting.js";
 
 export const Routing = () => {
     const isSidebarActive = useSelector(sideBarSelectors.getSidebarIsActive)
@@ -33,19 +37,22 @@ export const Routing = () => {
             {isSidebarActive && <SideBar />}
             <div className={styles.content}>
                     <Routes>
-
                         <Route path={'/'} element={<ArticlesFeed />}/>
                         <Route path={'/articles/:id'} element={<FullArticle />}/>
                         <Route path={'/profile/:id'} element={<Profile/>}>
                             <Route path="" element={<ProfileArticleFeed />} />
                             <Route path="drafts" element={<ProfileDraftsFeed />} />
                         </Route>
+                        <Route path={'/profile/:id/settings'} element={<UserSetting />}/>
+                        <Route path={'/about'} element={<About />}/>
                         {isAuth && <Route path={"/bookmarks"} element={<Bookmarks/>}/>}
 
                         {role === 'ADMIN' && <Route path={"/moderation"} element={<AdminModerationFeed />}/>}
                         {role === 'ADMIN' &&
                         <Route path={"/admin-panel"} element={<AdminPanel />}>
                             <Route path="registration" element={<CreationUser />} />
+                            <Route path="users-list" element={<UserList />} />
+                            <Route path="articles-list" element={<ArticleList />} />
                         </Route>}
 
                         <Route path={"/error-page-not-found"} element={<PageNotFound/>}/>

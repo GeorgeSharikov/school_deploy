@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.css'
 
 export const PageNotFound = (props) => {
+    document.title = `Страница не найдена`
     return (
         <div>
             <div className={styles.pageWrapper}>

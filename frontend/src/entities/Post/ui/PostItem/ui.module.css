@@ -5,6 +5,12 @@
     position: relative;
 }
 
+@media (max-width: 640px) {
+    .post{
+        margin-bottom: 20px;
+    }
+}
+
 .footer{
     padding-left: 20px;
     padding-right: 20px;

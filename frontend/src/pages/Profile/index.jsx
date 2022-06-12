@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 import { ProfileAvatar } from "../../features/avatar";
 import { ProfileStatus } from "../../features/status";
 import {useNavigate} from "react-router-dom";
-import {sideBarSelectors} from "../../features/sidebarToggle/model/slice.js";
+import SettingsIcon from '@mui/icons-material/Settings';
 
 export const Profile = (props) => {
     const dispatch = useDispatch()
@@ -20,6 +20,7 @@ export const Profile = (props) => {
 
     const isMyOwn = Number(id) === myId
     useEffect(() => {
+
         window.scrollTo(0, 0);
     }, [])
     useEffect(() => {
@@ -47,13 +48,15 @@ export const Profile = (props) => {
         }
         return `${styles.tab}`
     }
+    console.log(isAuth)
     const userData = useSelector(state => personalDataSelectors.getPeronalDataSelector(state, isMyOwn))
+    document.title = `${userData.firstName} ${userData.lastName} - Статьи`
     return (
         <div className={styles.wrapper} >
             <div className={styles.profileHeaderWrapper}>
-                    <ProfileAvatar ava={userData.avatar} />
-                    <h1 className={styles.name}>{userData.firstName}{userData.lastName}</h1>
-                    <ProfileStatus status={userData.status}/>
+                    <ProfileAvatar name={`${userData.firstName} ${userData.lastName}`} />
+                    <h1 className={styles.name}>{userData.firstName} {userData.lastName}</h1>
+                    <ProfileStatus status={userData.status} isMyOwn={isMyOwn}/>
                     <div className={styles.headerTabs}>
                         <div className={styles.tabsList}>
                             <NavLink to="" className={checkIfActive}>
@@ -64,6 +67,11 @@ export const Profile = (props) => {
                             </NavLink>}
                         </div>
                     </div>
+                {isMyOwn && <div style={{position: 'absolute', top: 24, right: 24, cursor: 'pointer'}}>
+                    <NavLink to={`${location.pathname}/settings`}>
+                        <SettingsIcon sx={{width: 30, height: 30}}/>
+                    </NavLink>
+                </div>}
             </div>
 
             <div className={styles.profileContentWrapper}>
@@ -71,6 +79,7 @@ export const Profile = (props) => {
                     <Outlet />
                 </div>
             </div>
+
         </div>
     );
 }

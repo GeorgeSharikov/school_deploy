@@ -3,10 +3,15 @@
     width: 112px;
     height: 112px;
     border-radius: 6px;
-    /* background-color: #dedede; */
     box-shadow: 0 0 0 4px #fff, inset 0 0 0 1px rgba(0,0,0,0.1);
     position: relative;
     z-index: 1;
     overflow: hidden;
     margin-bottom: 20px;
+}
+
+
+.changeStatus{
+    color: #3766a9;
+    cursor: pointer;
 }

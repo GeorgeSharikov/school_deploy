@@ -7,6 +7,19 @@
     position: relative;
 }
 
+.editorModal{
+    background-color: #fff;
+    margin: 20px auto;
+    position: absolute;
+    max-width: 880px;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    outline: 0;
+    border-radius: 8px;
+    display: flex;
+}
 
 /*title*/
 .Ieditor {
@@ -20,6 +33,8 @@
     margin-right: auto;
     box-sizing: content-box;
 }
+
+
 
 .inputTitle{
     display: block;
@@ -186,4 +201,50 @@
 
 .closeButton:hover{
     opacity: 1;
+}
+
+@media (max-width: 1025px) {
+    .editorModal{
+        width: 100%;
+        margin: 0px;
+        border-radius: 0px;
+        max-width: unset;
+    }
+    .Ieditor {
+        max-width: 500px;
+    }
+    .ce-block__content {
+        max-width: 500px;
+        padding: 0 50px;
+    }
+}
+@media (min-width: 651px){
+    .codex-editor--narrow .codex-editor__redactor {
+        margin-right: 0px;
+    }
+
+}
+@media (max-width: 651px){
+    .Ieditor{
+        max-width: 350px;
+        margin-left: 25px !important;
+    }
+}
+
+@media (max-width: 446px) {
+    .Ieditor{
+        max-width: 300px;
+        margin-left: 25px !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .Ieditor{
+        max-width: 250px;
+        margin-left: 25px !important;
+    }
+    .closeButton{
+        right: 20px;
+        top: 5px;
+    }
 }

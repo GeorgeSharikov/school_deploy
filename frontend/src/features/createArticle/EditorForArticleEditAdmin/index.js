@@ -11,7 +11,8 @@ import Textarea from "react-expanding-textarea";
 import CloseIcon from "@mui/icons-material/Close.js";
 
 export const EditorForArticleEditAdmin = ({close, articleData}) => {
-    const {showBlocksId, title, id: articleId, jsonData} = articleData
+    let {showBlocksId, title, id: articleId, jsonData} = articleData
+    showBlocksId = showBlocksId.filter(el => el !== '')
     setActiveBlocks(showBlocksId)
     console.log(showBlocksId)
     const {holder,placeholder,tools,tunes,i18n,logLevel,onChange} = settings
@@ -58,11 +59,11 @@ export const EditorForArticleEditAdmin = ({close, articleData}) => {
     }
     useEffect(() => {
         inputRef.current.focus()
-        // setTimeout(() => {
-        //     if(editorRef.current.children[0]) {
-        //         editorRef.current.removeChild(editorRef.current.children[0])
-        //     }
-        // }, 0)
+        setTimeout(() => {
+            if(editorRef.current.children[0]) {
+                editorRef.current.removeChild(editorRef.current.children[0])
+            }
+        }, 0)
         return () => {
             setActiveBlocks([])
             editor?.destroy()

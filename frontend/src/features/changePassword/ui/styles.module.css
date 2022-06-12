@@ -1,0 +1,40 @@
+.changePassword{
+    width: 100%;
+}
+
+.title{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    padding-right: 11px;
+    background-color: transparent;
+    font: inherit;
+    box-sizing:border-box;
+    outline: none;
+    border: none;
+    bottom-line: none;
+    transition: background-color 0.2s linear, border-color 0.2s linear, box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear !important;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 15px;
+    border: 1px #4683d9;;
+    border-radius: 10px;
+    background-color: #4683d9;
+    transition: opacity 0.1s;
+    width: 128px;
+    margin-top: 10px;
+    color: white;
+}
+
+.button:hover{
+    opacity: 0.8;
+}

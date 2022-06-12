@@ -1,14 +1,11 @@
 import styles from './ui.module.css'
 import Avatar from "@mui/material/Avatar";
+import {stringToHslColor} from "../../shared/helpers/generateRandomColor.js";
 
-export const ProfileAvatar = ({ava}) => {
-    ava = 'https://leonardo.osnova.io/f03665e4-d1d1-5847-ae85-7f100a04e29c/-/scale_crop/300x300/-/format/webp/'
+export const ProfileAvatar = ({name}) => {
     return(
-            // <div
-            // className={styles.headerAvatar}
-            // style={{backgroundImage: `url(${ava})`}}
-            // >
-            // </div>
-            <Avatar className={styles.headerAvatar}/>
+        <Avatar className={styles.headerAvatar} variant="rounded" sx={{width: 112, height: 112, backgroundColor: `${stringToHslColor(name, 50, 50)}`}}>
+            <div style={{fontSize: 60}}>{name[0].toUpperCase()}</div>
+        </Avatar>
     )
-} 
+}

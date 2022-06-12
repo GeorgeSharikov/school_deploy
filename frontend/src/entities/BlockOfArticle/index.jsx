@@ -58,7 +58,7 @@ export const BlockOfArticle = React.memo(({adminOptions, getArticles, getTotalCo
         setLoading(false)
     }, [page, dispatch, totalCount])
     return (
-        <div>
+        <div className={styles.wrapper}>
             {articlesFeed.length > 0 && articlesFeed.map((el, i) => {
                 if(i === articlesFeed.length-1 && !loading && page*5 <= totalCount  ){
                     return <div key={el.id} ref={setLastElement}>

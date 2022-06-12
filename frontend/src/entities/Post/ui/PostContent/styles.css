@@ -1,5 +1,6 @@
 .content-short{
     margin-bottom: 13px;
+    word-wrap: break-word;
 }
 .content-short .I-island-a{
     padding-left: 20px;
@@ -226,4 +227,10 @@ display: none;
 .content-short .block-delimiter:before {
     font-size: 23px;
 }
+}
+@media (max-width: 859px){
+    .content-short .quote_content svg{
+        left: -30px;
+        width: 21px;
+    }
 }

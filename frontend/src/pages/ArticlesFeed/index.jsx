@@ -11,6 +11,7 @@ import {useActions} from "../../shared/hooks/useActions.jsx";
 
 export const ArticlesFeed = () => {
     const {setFeedArticles} = useActions(articleActions)
+    document.title = `Лицей Days`
     return (
         <div className={styles.wrapper}>
                 <BlockOfArticle getArticles={(page) => getFeedArticles(page)}

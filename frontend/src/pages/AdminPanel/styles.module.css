@@ -3,23 +3,42 @@
     margin-top: 16px;
     padding: 16px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .header{
     background-color: white;
     display: flex;
     vertical-align: top;
+    height: 40px;
+    border-radius: 8px;
 }
 
 .tab{
-    padding: 0 12px;
+    padding: 10px 12px;
     flex-shrink: 0;
     cursor: pointer;
     color: #4d4d4d;
     text-decoration: none;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s color;
+}
+
+@media (max-width: 780px) {
+    .tab span{
+        display: none;
+    }
 }
 
 .tab:hover {
     color: #4683d9;
+}
+
+.activeTab{
+}
+
+.activeTab svg{
+    color: #e5a040;
 }

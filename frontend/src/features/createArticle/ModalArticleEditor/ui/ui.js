@@ -2,7 +2,7 @@ export const modalEditorStyles = {
     backgroundColor: '#fff',
     margin: '20px auto',
     position: 'absolute',
-    width: '880px',
+    maxWidth: '880px',
     top: 0, 
     right: 0, 
     bottom: 0, 

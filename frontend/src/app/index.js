@@ -13,6 +13,7 @@ export function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
+      document.title = 'Лицей Days'
       dispatch(checkUserAuth()).then(() => {
           dispatch(getPersonalData())
           dispatch(getBookmarks())

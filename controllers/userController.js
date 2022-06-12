@@ -38,6 +38,32 @@ class User{
             res.json({token})
         }
     }
+
+    async getAllUsers(req, res, next){
+        const users = await UserService.getAllUsers( next)
+        res.json(users)
+    }
+    async resetUserPassword(req, res, next){
+        const id = req.query.id
+        const code = await UserService.resetUserPassword(id, next)
+        res.json({code})
+    }
+
+    async changeStatus(req, res, next){
+        const {status} = req.body
+        const id = req.user.id
+
+        const statusData = await UserService.changeStatus(status,id, next)
+        res.send({statusData})
+    }
+
+    async changePassword(req, res, next){
+        const {password} = req.body
+        const id = req.user.id
+        console.log(password)
+        const statusData = await UserService.changePassword(password,id, next)
+        res.send({statusData})
+    }
 }
 
 export const UserController = new User()

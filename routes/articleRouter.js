@@ -12,7 +12,7 @@ router.get('/getArticleForEditor',CheckAuth, ArticleController.getArticleForEdit
 router.post('/createArticle', CheckAuth, ArticleController.createArticle)
 router.put('/updateArticle',CheckAuth, ArticleController.updateArticle)
 router.delete('/deleteArticle', CheckAuth, ArticleController.delete)
-router.delete('/deleteArticleByAdmin',CheckAccess('ADMIN'), ArticleController.delete)
+router.delete('/deleteArticleByAdmin',CheckAccess('ADMIN'), ArticleController.deleteArticleByAdmin)
 
 router.post('/like',CheckAuth, ArticleController.like)
 router.post('/dislike',CheckAuth, ArticleController.dislike)
@@ -28,10 +28,11 @@ router.get('/getDraftsArticles',CheckAuth, ArticleController.getDraftsArticles)
 router.get('/getDraftsTotalCount',CheckAuth, ArticleController.getDraftsTotalCount)
 
 router.get('/getFeedArticlesByBookmarks',CheckAuth, ArticleController.getFeedArticlesByBookmarks)
+
 router.get('/getModerationArticles',CheckAccess('ADMIN'), ArticleController.getModerationArticles)
 router.get('/getModerationTotalCount',CheckAccess('ADMIN'), ArticleController.getModerationTotalCount)
 router.put('/publishArticle', CheckAccess('ADMIN'), ArticleController.publishArticle)
 router.put('/declineArticle', CheckAccess('ADMIN'), ArticleController.declineArticle)
-
+router.get('/getAllArticles', CheckAccess('ADMIN'), ArticleController.getAllArticles)
 
 export const articleRouter = router

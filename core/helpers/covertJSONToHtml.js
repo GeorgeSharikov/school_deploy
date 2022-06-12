@@ -78,7 +78,7 @@ constructor() {
             maxWidth = (460 * width)/height
             maxHeight = 460
         }
-        return `<div style="max-width: ${maxWidth}px;max-height: ${maxHeight}px">
+        return `<div style="max-width: ${maxWidth}px;max-height: ${maxHeight}px; width: 100%">
                 ${divImg}
             </div>`
     }
@@ -89,7 +89,7 @@ constructor() {
             return `<figure class="figure-image">
             <div class="I-island-b">
                 <div class='content-image image-padding content-image-background''>
-                    <div style="max-width: ${(460 * width)/height}px;max-height: 460px;">
+                    <div style="max-width: ${(460 * width)/height}px;max-height: 460px; width: 100%">
                         <div class="image-inner" style="padding-bottom: 0px; background: transparent;">
                             <img src="${url}"/>
                         </div>
@@ -104,7 +104,7 @@ constructor() {
         return `<figure class="figure-image">
             <div class="I-island-c">
                 <div class='content-image '>
-                    <div style="max-width: 1020px;max-height: ${height}px;">
+                    <div style="max-width: 1020px;max-height: ${height}px; width: 100%">
                         <div class="image-inner" style="padding-bottom: 0px; background: transparent;">
                             <img src="${url}"/>
                         </div>
@@ -168,9 +168,9 @@ constructor() {
         const forFeed = `<figure class="figure-image">
             <div class="I-island-c">
                 <div class='content-image'>
-                    <div style="max-width: 640px;">
+                    <div style="max-width: 640px; width: 100%">
                         <div class="video__container">
-                            <video autoplay loop controls muted playsinline>
+                            <video autoplay loop controls muted playsinline style="display: block;width:  100%;">
                                 <source src=${url}>
                             </video>
                         </div>
@@ -181,9 +181,9 @@ constructor() {
         const forArticle = `<figure class="figure-image">
             <div class="I-island-b">
                 <div class='content-image'>
-                    <div style="max-width: 600px;">
+                    <div style="max-width: 600px; width: 100%">
                         <div class="video__container">
-                            <video autoplay loop controls muted playsinline>
+                            <video autoplay loop controls muted playsinline style="display: block;width:  100%;">
                                 <source src=${url}>
                             </video>
                         </div>
@@ -228,7 +228,7 @@ constructor() {
         const text = `<div class="warning">
              <div class="warning_title">
                 <span class="warning_sign">&#9757;</span>
-                ${title}
+                <p>${title}</p>
               </div>
              <span class="warning_text">${message}</span>
         </div>`
@@ -247,10 +247,10 @@ constructor() {
                     <div class="quote_content">
                         ${this.quoteSvg}
                         <div class="${quoteSize}">
-                            ${text}
+                            <p>${text}</p>
                         </div>
                         <div class="quote_author">
-                            ${caption}
+                            <p>${caption}</p>
                         </div>
                     </div>
                 </blockquote>

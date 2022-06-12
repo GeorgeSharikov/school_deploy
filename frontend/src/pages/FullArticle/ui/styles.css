@@ -4,18 +4,15 @@
     flex-direction: column;
     /*align-items: center;*/
     justify-content: center;
+    word-wrap: break-word;
 }
 
 .page-wrapper{
     padding-bottom: 30px;
     background-color: #fff;
-}
-
-@media (min-width: 1340px){
-    /*.page-wrapper{*/
-    /*    max-width: 1020px;*/
-    /*    margin: 0 auto;*/
-    /*}*/
+    max-width: 1020px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 @media (min-width: 640px) and (max-width: 1339px){
@@ -25,12 +22,16 @@
     }
 }
 
+
+
 .content_wrapper{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     padding-top: 24px;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .content_wrapper .content{
@@ -49,8 +50,15 @@
     padding: 0px;
 }
 
+@media (max-width: 640px){
+     .content .I-island-a{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 @media (min-width: 640px) and (max-width: 1559px){
-    .content-main, .content_wrapper .I-island-a, .content-main, .content_wrapper .I-island-b{
+     .content_wrapper .I-island-a, .content-main, .content_wrapper .I-island-b{
         width: 600px;
         margin-left: auto;
         margin-right: auto;
@@ -65,6 +73,16 @@
         margin-right: auto;
     }
 }
+
+h1 .I-island-a, 
+h2 .I-island-a, 
+h3 .I-island-a, 
+h4 .I-island-a, 
+h5 .I-island-a, 
+h6 .I-island-a {
+    word-break: break-all;
+}
+
 .content_header{
     display: flex;
     align-items: center;
@@ -88,6 +106,10 @@
     cursor: pointer;
 }
 
+.content p{
+    word-break: break-word;
+}
+
 .content ol, .content ul{
     margin: 12px 0;
     list-style: disc;
@@ -102,7 +124,7 @@
 
 .content ol li, .content ul li {
     margin: 10px 0 10px 2em;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 
 
@@ -122,14 +144,10 @@
     margin-bottom: 24px;
 }
 
-.content figure:last-child {
-
-}
-
-
 .quote{
     background-color: #fffaf1;
     padding: 35px 0 40px;
+    word-wrap: break-word;
 }
 
 .quote_text_center .quote_text_big{
@@ -148,7 +166,7 @@
 }
 
 .quote_content svg{
-
+    color: var(--gray-color);
     position: absolute;
     left: -57px;
     top: 0.25em;
@@ -166,6 +184,13 @@
     }
 }
 
+
+@media (max-width: 859px){
+    .quote_content svg{
+        left: -30px;
+        width: 21px;
+    }
+}
 .quote_text{
     font-size: 22px;
     font-weight: 400;
@@ -188,12 +213,13 @@
 }
 
 .quote_author{
-    font-size: 16px;
+    /*font-size: 16px;*/
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600;
     line-height: 1.45em;
     font-size: 1.06em;
+    word-wrap: break-word;
 }
 
 
@@ -216,20 +242,27 @@
     background: #fff9ef;
     color: #392e2f;
     font-size: 15px;
+    word-break: break-word;
+    align-items: center;
 }
 
 .warning_sign{
     margin-right: 15px;
 }
 
+
 .warning_text{
     padding-left: 15px;
+
 }
 
 .warning_title{
     font-weight: 700;
 }
 
+.warning_title p{
+    min-width: 100px;
+}
 .figure-image{
     margin-top: 13px;
     margin-bottom: 4px;

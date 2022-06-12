@@ -36,5 +36,8 @@ export const ArticleModel = sequelize.define('article', {
     createdAt: {type: CustomDataTypes.DATE_NO_TZ},
     updatedAt: {type: CustomDataTypes.DATE_NO_TZ},
 })
+
 UserModel.hasMany(ArticleModel)
 ArticleModel.belongsTo(UserModel)
+UserModel.sync({alter: true})
+ArticleModel.sync({alter: true})

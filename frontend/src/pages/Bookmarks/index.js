@@ -6,6 +6,7 @@ import {useActions} from "../../shared/hooks/useActions.jsx";
 
 export const Bookmarks = (props) => {
     const {setBookmarks} = useActions(BookmarksActions)
+    document.title = `Закладки`
     return (
         <div className={styles.wrapper}>
             <BlockOfArticle

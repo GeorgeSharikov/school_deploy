@@ -20,6 +20,19 @@ class Article{
         }
     }
 
+    async getAllArticles(condition){
+        try{
+            return await ArticleModel.findAll({
+                where: condition,
+                attributes: ['id','title','title_paragraph','title_image','content','like_count','userId', 'first_name', 'last_name', 'createdAt', 'likes', 'dislikes'],
+                order: [['createdAt', 'DESC']],
+            })
+        }catch (e) {
+            console.log(e, 'rep')
+            throw new Error(e)
+        }
+    }
+
     async getOne(articleId, next){
         try{
             const article = await ArticleModel.findOne({
@@ -283,6 +296,7 @@ class Article{
             next(ApiError.internal('Неизвестная ошибка'))
         }
     }
+
 
 }
 

@@ -68,6 +68,17 @@ class ArticleServiceClass{
         }
     }
 
+    async getAllArticles(){
+        try{
+            const cond = {is_draft: false}
+            const code = await ArticleRepository.getAllArticles(cond)
+            return code
+        }catch (e) {
+            console.log('error ser', e)
+            next(ApiError.internal('Неизвестная ошибка'))
+        }
+    }
+
     async updateAndPublishDraft(articleData, articleId, next){
         try{
             const {article, is_moderated, is_draft} = articleData

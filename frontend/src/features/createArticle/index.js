@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close.js";
 import {NotificationManager} from "react-notifications";
 import {useSelector} from "react-redux";
 import {userAuthSelectors} from "../../store/userAuthSlice/slice.js";
+import './ui/styles.css'
 
 export const ArticleEditor = ({close}) => {
     const editor = useMemo(() => new EditorJS(settings), [])
@@ -58,11 +59,11 @@ export const ArticleEditor = ({close}) => {
     }
     useEffect(() => {
         inputRef.current.focus()
-        // setTimeout(() => {
-        //     if(editorRef.current.children[0]) {
-        //         editorRef.current.removeChild(editorRef.current.children[0])
-        //     }
-        // }, 0)
+        setTimeout(() => {
+            if(editorRef.current.children[0]) {
+                editorRef.current.removeChild(editorRef.current.children[0])
+            }
+        }, 0)
         return () => {
             setActiveBlocks([])
             editor?.destroy()

@@ -32,6 +32,9 @@ const slice = createSlice({
             state.errorMessage = null
             state.otherAccountData = {}
             state.isFetching = false
+        },
+        changePersonalStatus(state, {payload}){
+            state.personalData.status = payload
         }
     },
     extraReducers: (builder) => {

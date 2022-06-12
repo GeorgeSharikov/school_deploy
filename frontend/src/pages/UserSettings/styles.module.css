@@ -1,0 +1,15 @@
+.wrapper{
+    max-width: 640px;
+    border-radius: 8px;
+    min-height: 600px;
+    background-color: white;
+    padding: 50px 100px;
+    display: flex;
+    margin: 0 auto;
+}
+@media (max-width: 450px) {
+    .wrapper{
+        padding: 50px 50px;
+    }
+}
+

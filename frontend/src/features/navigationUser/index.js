@@ -24,8 +24,11 @@ import {BookmarksActions} from "../../pages/Bookmarks/model/slice.js";
 import {draftsActions} from "../../pages/profileDraftsFeed/model/slice.js";
 import {adminModerationActions} from "../../pages/AdminModerationFeed/model/slice.js";
 import {stringToHslColor} from "../../shared/helpers/generateRandomColor.js";
+import { useWindowDimensions } from '../../shared/hooks/useWindowDimensions';
 
 export const NavigationUser = (props) => {
+    const {width} = useWindowDimensions()
+
     const [isModalVisible, setModalVisible] = useState(false)
     const [isListOpen, setIsListOpen] = useState(false)
     const dispatch = useDispatch()
@@ -65,17 +68,35 @@ export const NavigationUser = (props) => {
     const openHandler = () => setModalVisible(true)
     const closeHandler = () => setModalVisible(false)
 
+    const handleListOpening = () => {
+        if(isListOpen){
+            setIsListOpen(false)
+        }else{
+            setIsListOpen(true)
+        }
+    }
+
     return (
         <div>
             {isFetching
                 ? <Skeleton variant="rectangular" width={140} height={30} />
                 : isAuth ? <div className={styles.navigation}>
-                        <NavLink to={`/profile/${id}`} >
-                                    <Avatar sx={{backgroundColor: `${stringToHslColor(fullName, 50, 50)}`}}>{userData?.firstName?.[0]}</Avatar>
-                        </NavLink>
-                        <div className={styles.expand} onClick={() => setIsListOpen(true)}>
-                            <ExpandMoreIcon/>
-                        </div>
+                        {width > 700 
+                        ?<>
+                            <NavLink to={`/profile/${id}`}>
+                                        <Avatar sx={{backgroundColor: `${stringToHslColor(fullName, 50, 50)}`}}>{userData?.firstName?.[0]}</Avatar>
+                            </NavLink>
+                            <div className={styles.expand} onClick={handleListOpening}>
+                                <ExpandMoreIcon/>
+                            </div> 
+                        </>
+                        :<Avatar 
+                            sx={{backgroundColor: `${stringToHslColor(fullName, 50, 50)}`, marginLeft: '15px'}}
+                            onClick={() => setIsListOpen(true)}
+                        >
+                            {userData?.firstName?.[0]}
+                        </Avatar>}
+
                         {isListOpen && <div className={styles.listContainer} ref={ref}>
                             <span className={styles.listHorizon}></span>
                             <div className={styles.list}>
@@ -112,10 +133,10 @@ export const NavigationUser = (props) => {
                         </div>}
                     </div>
                     : <div className={styles.signIn} onClick={openHandler}>
-                        <PersonOutlineIcon sx={{marginRight: '8px', fontSize: '30px'}}/>
-                        <span>
+                        <PersonOutlineIcon sx={{marginRight:  width > 700 ? '8px' : '0', fontSize: width > 700 ? '30px' : '35px'}}/>
+                        {width > 700 && <span>
                             Войти
-                        </span>
+                        </span>}
                     </div>
             }
             {isModalVisible

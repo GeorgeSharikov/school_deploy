@@ -1,0 +1,163 @@
+.header{
+    padding-left: 65px;
+    display: grid;
+    max-width: 630px;
+    width: 100%;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+}
+
+.article{
+    display: flex;
+    margin-bottom: 15px;
+    grid-template-rows: 1fr;
+}
+
+.wrapper{
+    padding-top: 50px;
+}
+
+.itemWrapper{
+    display: grid;
+    grid-template-columns: 50px 630px;
+    grid-gap: 15px;
+}
+
+.item{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.articleInfo{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 200px 1fr;
+}
+
+.title{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.articleTools{
+    display: flex;
+    margin-left: 20px;
+}
+
+.btn{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 15px;
+    border: 1px #4683d9;;
+    border-radius: 10px;
+    background-color: #4683d9;
+    transition: opacity 0.1s;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.del{
+    background-color: rgb(244, 67, 54);
+}
+
+.edit{
+    background-color: #5388b4;
+}
+
+@media (max-width: 1371px) {
+    .article{
+        display: flex;
+        flex-direction: column;
+        max-width: 695px;
+        width: 100%;
+    }
+    .articleTools{
+        justify-content: right;
+        margin-top: 10px;
+    }
+    .btn{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 729px) {
+    .article{
+        max-width: 265px;
+        position: relative;
+    }
+
+    .itemWrapper{
+        grid-template-columns: 50px 1fr;
+    }
+
+    .article a{
+        width: 265px;
+    }
+
+    .articleTools{
+        width: 0px;
+    }
+    .articleInfo{
+        width: 200px;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .btn{
+        position: absolute;
+        left: 265px;
+        top: 0;
+    }
+
+    .del{
+        position: absolute;
+        top: 55px;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .title{
+        max-width: 200px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .wrapper{
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 445px) {
+    .articleTools{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: 0;
+    }
+    .btn{
+        position: inherit;
+    }
+    .del{
+        position: inherit;
+    }
+}

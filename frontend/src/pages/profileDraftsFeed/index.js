@@ -8,7 +8,7 @@ import {getFeedArticlesById, getProfileArticlesTotalCount} from "../profileArtic
 export const ProfileDraftsFeed = () => {
     const {setDrafts} = useActions(draftsActions)
     const {id} = useParams()
-
+    document.title = `Черновики`
     return(
         <BlockOfArticle
                         getArticles={(page) => getDraftsById({page, id})}

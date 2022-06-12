@@ -27,7 +27,6 @@ export class UserService{
 
      static async signIn(userData, next){
         const {email, password} = userData
-
          if(!email || !password){
              return next(ApiError.badRequest('Некорректны логин или пароль.'))
          }
@@ -52,6 +51,25 @@ export class UserService{
         const user = await UserRepository.createUser({email, password: hashPassword, firstName, lastName, role}, next)
 
         return generateJWT(user.id, email, user.role)
+    }
+
+    static async getAllUsers(next){
+        const users = await UserRepository.getAllUsers(next)
+        return users
+    }
+    static async resetUserPassword(id, next){
+        const users = await UserRepository.resetUserPassword(id, next)
+        return users
+    }
+    static async changeStatus(status,id, next){
+        const statusData = await UserRepository.changeStatus(status,id, next)
+        return statusData
+    }
+    static async changePassword(password,id, next){
+        const hashPassword = await bcrypt.hash(password, 5)
+        console.log(hashPassword)
+        const statusData = await UserRepository.changePassword(hashPassword, id, next)
+        return statusData
     }
 }
 
