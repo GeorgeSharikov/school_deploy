@@ -114,7 +114,7 @@ const AdminPanelEdit = ({close, articleData, callback}) => {
     useEffect(() => {
         inputRef.current.focus()
         setTimeout(() => {
-            if(editorRef.current.children[0]) {
+            if(editorRef.current.children[0] && process.env.NODE_ENV !== 'production') {
                 editorRef.current.removeChild(editorRef.current.children[0])
             }
         }, 0)
