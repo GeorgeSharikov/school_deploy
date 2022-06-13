@@ -29,7 +29,7 @@ app.use('/api', mainRouter)
 app.use(ErrorHandler)
 
 
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
     if (req.method === 'GET' && req.accepts('html') && !req.is('json') && !req.path.includes('.')) {
       res.sendFile('index.html', { root })
     }
