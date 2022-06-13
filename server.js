@@ -21,11 +21,11 @@ app.disable('etag');
 app.use(express.json())
 app.use(fileupload({}))
 app.use(cors())
-app.use('/api/static/images', express.static(path.resolve(path.dirname(''), 'Static/images')))
-app.use('/api/static/videos', express.static(path.resolve(path.dirname(''), 'Static/videos')))
+//app.use('/api/static/images', express.static(path.resolve(path.dirname(''), 'Static/images')))
+//app.use('/api/static/videos', express.static(path.resolve(path.dirname(''), 'Static/videos')))
 
 app.use(express.static(path.resolve(__dirname, "./frontend/build")));
-app.use('/api', mainRouter)
+//app.use('/api', mainRouter)
 app.use(ErrorHandler)
 
 
