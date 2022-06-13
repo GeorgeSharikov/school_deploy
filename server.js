@@ -14,18 +14,18 @@ const root = path.join(__dirname, "/frontend", "build",)
 const PORT = process.env.PORT || 4000
 
 const app = express()
-//app.use(favicon(path.join(__dirname, "./frontend/build", 'favicon.ico')))
+app.use(favicon(path.join(__dirname, "./frontend/build", 'favicon.ico')))
 app.disable('etag');
 
 
 app.use(express.json())
 app.use(fileupload({}))
 app.use(cors())
-//app.use('/api/static/images', express.static(path.resolve(path.dirname(''), 'Static/images')))
-//app.use('/api/static/videos', express.static(path.resolve(path.dirname(''), 'Static/videos')))
+app.use('/api/static/images', express.static(path.resolve(path.dirname(''), 'Static/images')))
+app.use('/api/static/videos', express.static(path.resolve(path.dirname(''), 'Static/videos')))
 
 app.use(express.static(path.resolve(__dirname, "./frontend/build")));
-//app.use('/api', mainRouter)
+app.use('/api', mainRouter)
 app.use(ErrorHandler)
 
 
