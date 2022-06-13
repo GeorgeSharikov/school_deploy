@@ -146,7 +146,7 @@ constructor() {
         if(data.withBackground || (data.withBorder && data.stretched && data.withBackground)){
             type = 'background'
         }
-        if(height > 1500){
+        if(height > 1500 || (width < 640 && (type === 'stretched' || type === 'stretched and border'))){
             type='background'
             contentWrapperClasses+=' image-padding content-image-background'
         }
