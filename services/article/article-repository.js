@@ -4,13 +4,13 @@ import {ApiError} from "../../error/ApiError.js";
 class Article{
     async getFeedArticlesByPage(page, condition){
         try{
-            const amount = page*5
+            const amount = page*20
             const articles = await ArticleModel.findAll({
                 where: condition,
                 attributes: ['id','title','title_paragraph','title_image','content','like_count','userId', 'first_name', 'last_name', 'createdAt', 'likes', 'dislikes'],
                 order: [['createdAt', 'DESC']],
-                offset: amount-5,
-                limit: 5
+                offset: amount-20,
+                limit: 20
             })
             return articles
 
